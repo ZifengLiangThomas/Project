@@ -1,0 +1,194 @@
+{"rooms":{
+  "base": {
+    "name" : "base",
+    "description": "You are standing in your base. You are ready for the adventure",
+    "exits": {
+      "North" : "corridor A"
+    },
+    "contents": {
+      "match" : 2,
+      "coin" : 10
+    },
+    "darkness" : 0
+  },
+  "corridor A": {
+    "name" : "corridor A",
+    "description": "The corridor is filled with dirt and spider webs. Mouses fled away as you got in",
+    "exits": {
+      "South": "base",
+      "North": "corridor B",
+      "West" : "black market"
+    },
+    "contents": {
+      "coin" : 1
+    },
+    "darkness" : 1
+  },
+  "black market": {
+    "name" : "black market",
+    "description": "You see bottles and boxes for sale on the shelf",
+    "exits": {
+      "East": "corridor A"
+    },
+    "contents": {
+      "match" : 1
+    },
+    "darkness" : 0
+  },
+  "corridor B": {
+    "name" : "corridor B",
+    "description": "You see colorful drawings on the walls of the long corridor. There are also some characters you don't understand. Maybe you should ask someone",
+    "exits": {
+      "North": "living room",
+      "South": "corridor A"
+    },
+    "contents": {
+      "match" : 1
+    },
+    "darkness" : 1
+  },
+  "living room": {
+    "name" : "living room",
+    "description": "It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere",
+    "exits": {
+      "North": "bedroom",
+      "South": "corridor B",
+      "East" : "corridor C",
+      "West" : "study"
+    },
+    "contents": {
+      "match" : 1
+    },
+    "darkness" : 0
+  },
+
+  "bedroom": {
+    "name" : "bedroom",
+    "description": "The bedroom is clean and tidy, but there is a weird smell",
+    "exits": {
+      "South": "living room"
+    },
+    "contents": {
+      "glass of unknown liquid" : 1
+    },
+    "darkness" : 1
+  },
+
+  "study": {
+    "name" : "study",
+    "description": "You see many books on the desk",
+    "exits": {
+      "East": "living room"
+    },
+    "contents": {
+      "sword" : 1,
+      "coin" : 5
+    },
+    "darkness" : 0
+  },
+  "corridor C": {
+    "name" : "corridor C",
+    "description": "The corridor is filled with dirt and spider webs. There are several portraits on the wall",
+    "exits": {
+      "West": "living room",
+      "East" : "lobby"
+    },
+    "contents": {
+      "coin" : 1
+    },
+    "darkness" : 0
+  },
+  "lobby":{
+    "name" : "lobby",
+    "description": "There is a lock on the gate, you need to say the password to the lock to open the door. Only the old man knows the password.",
+    "exits" : {
+      "East" : "corridor C"
+    },
+    "contents": {
+    },
+    "darkness" : 0
+  },
+
+  "East of the House" : {
+    "name": "East of the House",
+    "description" : "Congratulations! You have successfully got out of the house.",
+    "darkness" : 0,
+    "contents" : {},
+    "exits" : {}
+  },
+  "cage" : {
+    "name": "cage",
+    "description" : "Sadly, you are not able the kill the thief on time. The angry old man put you in a cage. Your game is over",
+    "darkness" : 1,
+    "contents" : {},
+    "exits" : {}
+  }
+},
+  "characters": {
+    "player":{
+      "name" :"John",
+      "description":"A 30 years old man",
+      "inventory" : {"match" : 5, "coin": 12, "banana" : 1, "apple" :1}
+    },
+    "thief" : {
+      "talk" : "You can't fight me without a sword. Bye!",
+      "status" : 1,
+      "stolenItem": {"match" : 1, "gold": 1, "coin" : 0, "potion": 0},
+      "position" : "corridor C",
+      "description1" : "You met a thief. The thief stole ",
+      "description2" : "The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag "
+
+    },
+    "dog" : {
+      "talk" : "The dog doesn't understand what you are taking about",
+      "status" : 1,
+      "description1" : "The huge dog is barking at you, you are too afraid to look around the room. You need to buy some potion to let it fall asleep",
+      "description2" : "The dog was sleeping deeply. You can look around the room now",
+      "position" : "study"
+    },
+    "old man" : {
+      "talk" : "If you could kill the thief and bring back my gold, I will tell you how to get out of here. The thief must be in one of the three corridors. But if you can't do it within 12 hours, I will treat you as another invader and imprison you forever (Time bomb)",
+      "status" : 1,
+      "description1" : "The old man is sitting on the ground. He looks very angry",
+      "description2" : "You brought back the things stolen to the old man. He looks very happy.",
+      "position" : "living room"
+    },
+    "merchant" : {
+      "description" : "You see a merchant sitting inside. you should talk to him if you wanna buy anything",
+      "talk": "If you have 5 coins, you can buy potion by giving coin to me",
+      "position" : "black market"
+    }
+  },
+  "time": 0,
+  "match" : 0,
+  "pansy": -1,
+  "score" : 0,
+  "items" : {
+    "match" : {
+      "description" : "A match can be used to light up a dark room for a while"
+    },
+    "potion" : {
+      "description" : "The potion can be used to make animals fall asleep",
+      "object" : "dog"
+    },
+    "sword" : {
+      "description" : "The sword can be used to kill the thief",
+      "object" : "thief"
+    },
+    "glass of unknown liquid" : {
+      "description" : "The yellow liquid emits weird smell, you feel dizzy after smelling it"
+    },
+    "gold":{
+      "description" : "The gold belongs to the old man. Bring it back to him and he will tell you how to get out of the house",
+      "target" : "old man"
+    },
+    "coin":{
+      "description" : "The coin can be used to to buy things from the black market",
+      "target" : "merchant"
+    },
+    "banana": {"description" : "You can eat it"
+    },
+    "apple": {"description" : "You can eat it"
+    }
+  }
+}

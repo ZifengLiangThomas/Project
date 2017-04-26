@@ -1,0 +1,62 @@
+group 'edu.rice'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'checkstyle'
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+idea {
+    project {
+        jdkName = '1.8'
+        languageLevel = '1.8'
+    }
+}
+
+checkstyle {
+    toolVersion = '7.1'
+}
+
+// IntelliJ's Groovy inspections complains about this compileJava block, but it's a false-positive (it's actually
+// straight out of the Gradle manual), so we disable the inspection here.
+
+//noinspection GroovyAssignabilityCheck
+compileJava {
+    //enable compilation in a separate daemon process
+    options.fork = true
+
+    //enable incremental compilation
+    options.incremental = true
+}
+
+tasks.withType(JavaCompile) {
+    // turn on all warnings, except for the ones that are annoying or unhelpful
+    options.compilerArgs << "-Xlint:all" << "-Xlint:-serial" << "-Xlint:-processing"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repository.apache.org/content/repositories/snapshots/" // commons-imaging isn't available from MavenCentral
+    }
+}
+
+dependencies {
+    compile('com.sparkjava:spark-core:2.3') {
+        exclude module: 'slf4j-simple' // because we're using logback instead
+    }
+
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.apache.commons:commons-imaging:1.0-SNAPSHOT'
+    compile 'org.jetbrains:annotations:15.0'
+    compile 'ch.qos.logback:logback-classic:1.1.6'
+    compile 'com.j2html:j2html:0.7'
+    testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile 'junit:junit:4.12'
+}

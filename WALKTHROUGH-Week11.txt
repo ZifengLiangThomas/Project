@@ -1,0 +1,157 @@
+> start
+room1
+The room is filled with trashes. The smell is disgusting
+You can check the contents by entering "look".
+You can go to other rooms by entering their directions
+
+> look
+room1
+The room is filled with trashes. The smell is disgusting
+
+Contents:
+1 can of pea
+2 coin
+2 match
+2 potion
+
+Exits:
+East
+South
+
+> look pea
+A can of pea can be used to recover your health
+
+> look coin
+A coin can be used to buy things from the NPC
+
+> look match
+A match can be used to light up a dark room for a while
+
+> look potion
+A potion can be used to make animals fall asleep
+
+> take pea
+You took one can of pea
+
+> inventory
+
+Inventory
+1 can of pea
+1 match
+1 potion
+
+> drop can
+You dropped the can of pea
+
+> inventory
+
+Inventory
+1 match
+1 potion
+
+> look
+room1
+The room is filled with trashes. The smell is disgusting
+
+Contents:
+1 can of pea
+2 coin
+2 match
+2 potion
+
+Exits:
+East
+South
+
+> take match
+You took one match
+
+> take potion
+You took one potion
+
+> south
+go room2
+This room is full of dirt. You see some bloods on the wall
+
+> look
+room2
+This room is full of dirt. You see some bloods on the wall
+
+Contents:
+3 coin
+1 potion
+
+Exits:
+East
+North
+
+> take coin
+You took one coin
+
+> right
+IDK
+
+> east
+go room4
+There is a huge dog barking at you. Fortunately, it is chained
+
+> use potion on dog
+You used potion on the dog
+
+> look
+room4
+The dog fell asleep
+
+Contents:
+3 coin
+
+Exits:
+North
+West
+
+> north
+room3
+The room is dark.
+
+> use match
+You struck the match
+
+> look
+room3
+There are a desk and a chair in the room
+
+Contents:
+3 match
+
+Exits:
+South
+West
+
+> north
+Wrong direction
+
+> east
+Wrong direction
+
+> south
+Your match burns out
+go room4
+The dog fell asleep
+
+> north
+room3
+The room is dark.
+
+> use match
+You struck the match
+
+> look
+room3
+There are a desk and a chair in the room
+
+Contents:
+3 match
+
+Exits:
+South
+West

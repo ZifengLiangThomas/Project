@@ -1,0 +1,144 @@
+Describe your design here.
+
+Week 12
+Special in-game items
+3a. You can use coin (money) in the black market to buy potion. [give coin to merchant]
+    match, apple, banana can be used    [use match]
+    stolen items can be taken from the thief's bag after you kill the thief [take match from bag]
+    player are awarded for successful steps in the game 
+
+3b. Pansy of perplexity
+    You can find the "pansy of perplexity" liquid at the bedroom.
+    After taking it and then using it, your command for direction
+    will be replaced by one of the possible exits of your current room.
+    The effect will last for several steps and then the player will recover.
+
+3c. The thief
+    The thief in my game will random appear in Corridor A, B or C. He will steal something or nothing
+    randomly from your inventory. You can kill the thief by [use sword on thief] right after he stole
+    your item. Then you can [take] your stolen items back from the thief's [bag].
+
+3d. The time bomb
+    The time bomb is activated when the player talks to the old man. The old man will assign a task
+    to the player. If the player can finish it within certain time, he can get the password for the exit.
+    Otherwise, he will be threw into a cage, which is the end of the game.
+
+3e. The tardis
+    The only way to get to the East of the house, is by [say] password [to] [lock]. The player
+    cannot get there on foot.
+
+3f. Darkness
+    There are several dark rooms. You need to [use match] in order to [look]/[take]
+
+3g. Matches
+    If you have You can [use match] such that you can [look] or [take] in a dark room for a while.
+
+Required commands
+north/n/west/w/east/e/south/s/: go toward certain direction
+
+look/l: show the description, contents, exits of the room
+If the room is dark, you need to use match before "look"
+
+look [item name]: show the description of the item
+
+say [...]: say something
+say [password] to [lock] say the password to the lock at the lobby in order to unlock the door
+
+z: the sleep command
+
+talk to [NPC]: you can talk to merchant/thief/old man/dog if you are in their rooms.
+
+give[item] to [NPC]: give [coin] to [merchant] to buy potion;
+                     give [gold] to [old man] to get the password
+
+take [item name]: take something from the contents of the the room into your inventory
+
+drop [something]: put something from your inventory into the contents of the room
+
+take [item name] from [bag]: take stolen items back after you kill the thief
+
+use [item]: Some items are consumable without a target, such as apple, banana, match
+
+use [item] on [NPC]: use sword on thief to kill the thief; use potion on dog to make the dog fall asleep
+
+inventory/inv: check your inventory
+score: check your score
+time: check how many commands you have entered
+start: restart the adventure
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+Week 11
+Added special in-game items:
+Special in game item 1 -- Darkness:
+By entering "east", you will enter room3. Room3 is dark,
+you can't know the contents and exits by entering "look".
+
+Special in game item 2 -- matches:
+If you have matches in your inventory,
+you can use them by entering "use match."
+Then, you will be able to look around the dark room for a while.
+After a few commands, the match will burn out. You need to use
+another match to light up the room.
+
+Special in-game items next week:
+1. points
+I will add {point : 0 } into my json world, the player can gain
+points by successfully lighting up the dark room or using items on
+certain targets.
+2. NPC
+I will add thief and seller into the json world. The seller has a fixed
+position. When the player has the same position as the seller, the player
+can talk to the seller and use money on the seller to buy certain things like
+"potion" or "match". The thief will steal the player's money and the items
+in his inventory, if they are in the same room.
+3.-The time bomb
+When the clock-value reaches certain amount, the time bomb explodes,
+resulting in the loss of player's ability to use "look" and to tell the directions of exits.
+The player will gain his ability back after certain amount of commands or using potions.
+4. The pansy of perplexity
+    I will put the flower in a room. Once the player looks at, his commands for
+    directions will be disoriented.
+
+
+
+
+
+
+Week 10
+1. Items
+Now my json world has 2 objects : rooms and characters.
+I will add a item object which contains itemName and location.
+If the player's position matches the items'location and enter something like "take",
+the item jobject and the character inventory jobject will be updated.
+
+2. Clock
+I will also add a clock object to my json file.
+I will connect the time-increment function with other operations by using monads,
+such that each operation taken will increment the clock by 1.
+
+-The time bomb
+When the clock-value reaches certain amount, the time bomb explodes,
+resulting in the loss of player's ability to use "look" and to tell the directions of exits.
+The player will gain his ability back after
+certain amount of commands or using potions.
+
+3. Money
+I will add more NPC to the character objects in my json file.
+The player can earn money by achieving certain tasks.
+The thief will steal the player's money and the items
+in his inventory, if they are in the same room.
+The sellers can sell weapons and potions to the player such that
+he could beat the thief or other opponents.
+
+4 Darkness and matches
+There will be certain rooms that have the property "darkness".
+In those rooms, the player can't tell the
+directions of exits, use "look", or talk to the NPC. He has to use money to buy matches or torches
+to do those certain things.
+
+5 Operations
+I will add more function that take commands such as "take", "pick up", "talk"...

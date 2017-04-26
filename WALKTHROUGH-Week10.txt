@@ -1,0 +1,37 @@
+>start
+You are in room 1 now. You see a door in the South and a door in the East.
+You can check the contents by entering "look".
+You can go to other rooms by entering their directions
+
+>look
+You find many books on a desk
+
+>dsadasdas (Unknown command)
+I don't understand your input.
+You are in room 1; You see a door in the South and a door in the East
+
+>south (exit)
+You are in room 2; You see a door in the North and a door in the East
+
+>look
+You find an apple
+
+>west (non-exist exit)
+
+You are in room 2; You see a door in the North and a door in the East;
+
+>east
+
+You are in room 4; You see a door in the West and a door in the North
+
+>look
+
+You find an orange 
+
+>north
+
+You are in room 3; You see a door in the West and a door in the South
+
+>west
+
+You are in room 1; You see a door in the South and a door in the East

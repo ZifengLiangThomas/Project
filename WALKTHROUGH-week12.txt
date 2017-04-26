@@ -1,0 +1,598 @@
+> start
+base
+You are standing in your base. You are ready for the adventure
+You can check the contents by entering "look".
+You can go to other rooms by entering their directions
+
+> inv
+
+Inventory
+1 apple
+1 banana
+10 coin
+2 match
+
+> look
+base
+You are standing in your base. You are ready for the adventure
+
+Contents:
+10 coin
+2 match
+
+Exits:
+North
+
+> take match
+You took one match
+You score has increased by 1 point
+
+> take match
+You took one match
+You score has increased by 1 point
+
+> drop apple
+You dropped the apple
+
+> inventory
+
+Inventory
+1 banana                   //After giving the "take" and "drop" commands", you have 2 more matches and 1 less apple
+10 coin
+4 match
+
+> north
+went north
+corridor A
+The room is dark.                     //Darkness
+You met a thief. The thief stole nothing from you inventory         //Thief appears in one of the three corridors randomly,
+                                                                    // and steal items randomly. Also, he sometimes fails to steal anything.)
+
+> use match
+You struck the match                                   //match: you can "look" for a while after you use match
+You score has increased by 1 point
+
+> look
+corridor A
+The corridor is filled with dirt and spider webs. Mouses fled away as you got in
+
+Contents:
+1 coin
+
+Exits:
+North
+South
+West
+
+> take coin
+You took one coin
+You score has increased by 1 point
+
+> west
+went west                                                               //A place for using money
+black market
+You see bottles and boxes for sale on the shelf
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> talk to merchant                                                                  //"talk to" command
+You talked to the merchant
+merchant : If you have 5 coins, you can buy potion by giving coin to me
+Your match burns out                                                                 //match burns out
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> inv
+
+Inventory
+1 banana
+11 coin
+3 match
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> give coin to merchant                            //"give [] to []" command
+You bought the potion
+You score has increased by 1 point
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> give coin to merchant
+You bought the potion
+You score has increased by 1 point
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> inv
+
+Inventory                                   //You have 10 less coins and 2 more potions after the transaction
+1 banana
+1 coin
+3 match
+2 potion
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> east
+went east
+corridor A
+The room is dark.                           //darkness again cuz your match burned out
+You met a thief. The thief stole banana from you inventory
+
+> north
+went north
+corridor B
+The room is dark.
+You met a thief. The thief stole nothing from you inventory
+
+> inv
+
+Inventory
+0 banana                       //The thief stole a banana from you this time
+1 coin
+2 match
+2 potion
+
+> north
+went north
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+The old man is sitting on the ground. He looks very angry
+
+> north
+went north
+bedroom
+The room is dark.                 //darkness
+
+> use match
+You struck the match
+You score has increased by 1 point
+
+> look
+bedroom
+The bedroom is clean and tidy, but there is a weird smell
+
+Contents:
+1 glass of unknown liquid
+
+Exits:
+South
+
+> take liquid                                       //substring
+You took one glass of unknown liquid
+You score has increased by 1 point
+
+> inv
+
+Inventory
+0 banana
+0 coin
+1 glass of unknown liquid
+1 match
+1 potion
+
+> use glass
+You feel too dizzy to tell any direction       //pansy of perplexity
+Your match burns out
+
+> north                                //pansy of perplexity
+went south                           //pansy of perplexity
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+The old man is sitting on the ground. He looks very angry
+
+> east
+went east
+corridor C
+The corridor is filled with dirt and spider webs. There are several portraits on the wall
+
+> east                           //pansy of perplexity
+went west                                //pansy of perplexity
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+The old man is sitting on the ground. He looks very angry
+
+> west
+went west
+study
+You see many books on the desk
+You are able to tell directions now                      //pansy of perplexity ended
+The huge dog is barking at you, you are too afraid to look around the room. You need to buy some potion to let it fall asleep
+
+> use potion on dog                             //use [] on [] command, you have to use potion on dog to check this room
+You used potion on the dog
+The dog was sleeping deeply. You can look around the room now
+You score has increased by 1 point
+
+> look
+study
+You see many books on the desk
+
+Contents:
+5 coin
+1 sword
+
+Exits:
+East
+The dog was sleeping deeply. You can look around the room now
+
+> take sword
+You took one sword
+The dog was sleeping deeply. You can look around the room now
+You score has increased by 1 point
+
+> east
+went east
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+The old man is sitting on the ground. He looks very angry
+
+> talk to old man                                    //talk to [] command
+You talked to the old man
+old man : If you could kill the thief and bring back my gold,
+I will tell you how to get out of here. The thief must be in one of the three corridors.
+But if you can't do it within 12 hours, I will treat you as another invader and imprison you forever (Time bomb)
+The old man is sitting on the ground. He looks very angry                       //time bomb started
+
+> z
+one hour passed
+You still have 11 hours to finish your task                         //time bomb counting down
+The old man is sitting on the ground. He looks very angry
+
+> z
+one hour passed
+You still have 10 hours to finish your task
+The old man is sitting on the ground. He looks very angry
+
+> z
+one hour passed
+You still have 9 hours to finish your task
+The old man is sitting on the ground. He looks very angry
+
+> z
+one hour passed
+You still have 8 hours to finish your task
+The old man is sitting on the ground. He looks very angry
+
+> z
+one hour passed
+You still have 7 hours to finish your task
+The old man is sitting on the ground. He looks very angry
+
+> south
+went south
+corridor B
+The room is dark.
+You still have 6 hours to finish your task
+You met a thief. The thief stole coin from you inventory
+
+> north
+went north
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+You still have 5 hours to finish your task
+The old man is sitting on the ground. He looks very angry
+
+> south
+went south
+corridor B
+The room is dark.
+You still have 4 hours to finish your task
+
+> z
+one hour passed
+You still have 3 hours to finish your task
+
+> z
+one hour passed
+You still have 2 hours to finish your task
+You met a thief. The thief stole match from you inventory
+
+> z
+one hour passed
+You still have 1 hours to finish your task
+
+> z
+one hour passed
+You still have 0 hours to finish your task
+
+The angry old man threw you into his cage                       //time bomb exploded. Ending I: you lost.
+
+> look
+cage
+The room is dark.
+
+> inv
+
+Inventory
+0 banana
+0 coin
+0 match
+1 potion
+1 sword
+
+> score
+11.0
+
+////////////////////////////////////////////////////////////////////////
+> start
+base
+You are standing in your base. You are ready for the adventure
+You can check the contents by entering "look".
+You can go to other rooms by entering their directions
+
+> look
+base
+You are standing in your base. You are ready for the adventure
+
+Contents:
+10 coin
+2 match
+
+Exits:
+North
+
+> take match
+You took one match
+You score has increased by 1 point
+
+> take match
+You took one match
+You score has increased by 1 point
+
+> north
+went north
+corridor A
+The room is dark.
+
+> use match
+You struck the match
+You score has increased by 1 point
+
+> look
+corridor A
+The corridor is filled with dirt and spider webs. Mouses fled away as you got in
+
+Contents:
+1 coin
+
+Exits:
+North
+South
+West
+
+> west
+went west
+black market
+You see bottles and boxes for sale on the shelf
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> talk to merchant
+You talked to the merchant
+merchant : If you have 5 coins, you can buy potion by giving coin to me
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> give coin to merchant
+You bought the potion
+You score has increased by 1 point
+Your match burns out
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> give coin to merchant
+You bought the potion
+You score has increased by 1 point
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> inv
+
+Inventory
+1 apple
+1 banana
+10 coin
+3 match
+2 potion
+You see a merchant sitting inside. you should talk to him if you wanna buy anything
+
+> east
+went east
+corridor A
+The room is dark.
+
+> use match
+You struck the match
+You met a thief. The thief stole coin from you inventory
+You score has increased by 1 point
+
+> look
+corridor A
+The corridor is filled with dirt and spider webs. Mouses fled away as you got in
+
+Contents:
+1 coin
+
+Exits:
+North
+South
+West
+You met a thief. The thief stole coin from you inventory
+
+> talk to thief
+You talked to the thief
+thief : You can't fight me without a sword. Bye!
+
+> north
+went north
+corridor B
+You see colorful drawings on the walls of the long corridor. There are also some characters you don't understand. Maybe you should ask someone
+
+> north
+went north
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+Your match burns out
+The old man is sitting on the ground. He looks very angry
+
+> look
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+
+Contents:
+1 match
+
+Exits:
+East
+North
+South
+West
+The old man is sitting on the ground. He looks very angry
+
+> west
+went west
+study
+You see many books on the desk
+The huge dog is barking at you, you are too afraid to look around the room. You need to buy some potion to let it fall asleep
+
+> say hi to dog                          //"say []" command
+You said hi to dog, but nothing happened
+The huge dog is barking at you, you are too afraid to look around the room. You need to buy some potion to let it fall asleep
+
+> talk to dog
+You talked to the dog
+dog : The dog doesn't understand what you are taking about
+The huge dog is barking at you, you are too afraid to look around the room. You need to buy some potion to let it fall asleep
+
+> use potion on dog                                 //"use [] on [] command"
+You used potion on the dog
+The dog was sleeping deeply. You can look around the room now
+You score has increased by 1 point
+
+> look
+study
+You see many books on the desk
+
+Contents:
+5 coin
+1 sword
+
+Exits:
+East
+The dog was sleeping deeply. You can look around the room now
+
+> take sword
+You took one sword
+The dog was sleeping deeply. You can look around the room now
+You score has increased by 1 point
+
+> use sword
+there is no such a command
+
+> east
+went east
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+The old man is sitting on the ground. He looks very angry
+
+> talk to old man
+You talked to the old man
+old man : If you could kill the thief and bring back my gold, I will tell you how to get out of here. The thief must be in one of the three corridors. But if you can't do it within 12 hours, I will treat you as another invader and imprison you forever (Time bomb)
+The old man is sitting on the ground. He looks very angry
+
+> east
+went east
+corridor C
+The corridor is filled with dirt and spider webs. There are several portraits on the wall
+You still have 11 hours to finish your task
+
+You met a thief. The thief stole match from you inventory
+
+> use sword on thief                    //"use [] on [] command"
+You used sword on the thief
+You still have 10 hours to finish your task
+
+The thief was lying on the ground with a sword stabbed in his gut.
+You saw a bag next to his body. You can take your lost items from the bag
+You score has increased by 1 point
+
+> take gold from bag                                //"take [] from [] command"
+You took gold from the bag
+You still have 9 hours to finish your task
+
+The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag
+You score has increased by 1 point
+
+> take match from the bag
+I don't understand your command
+You still have 8 hours to finish your task
+
+The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag
+
+> take match from bag                    //get the stolen items back
+You took match from the bag
+You still have 7 hours to finish your task
+
+The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag
+You score has increased by 1 point
+
+> west
+went west
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+You still have 6 hours to finish your task
+
+The old man is sitting on the ground. He looks very angry
+
+> give gold to old man                           //"give [] to []" command
+You gave the gold to the old man
+You still have 5 hours to finish your task
+
+You brought back the things stolen to the old man. He looks very happy.
+You score has increased by 1 point
+
+> talk to old man                                    //Get the password for the lock
+You talked to the old man
+old man : You can unlock the lobby's door by saying 3358 to the lock
+You brought back the things stolen to the old man. He looks very happy.
+
+> look
+living room
+It is a mess. Chairs and tables are knocked down. All drawers are open. Various items are thrown everywhere
+
+Contents:
+1 match
+
+Exits:
+East
+North
+South
+West
+You brought back the things stolen to the old man. He looks very happy.
+
+> east
+went east
+corridor C
+The corridor is filled with dirt and spider webs. There are several portraits on the wall
+The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag
+
+> look
+corridor C
+The corridor is filled with dirt and spider webs. There are several portraits on the wall
+
+Contents:
+1 coin
+
+Exits:
+East
+West
+The thief was lying on the ground with a sword stabbed in his gut. You saw a bag next to his body. You can take your lost items from the bag
+
+> east
+went east
+lobby
+There is a lock on the gate, you need to say the password to the lock to open it. Only the old man knows the password.
+
+> say 1234 to lock
+wrong password
+
+> say 3358 to lock                                          //"say [] to []" command
+You said the correct password, successfully got out of the house.       //The Tardis, you can only reach the East of the house through this
+
+> look
+East of the House
+Congratulations! You have successfully got out of the house.            //Ending II: You won.
+You didn't find anything in the East of the House
+
+Exits:
